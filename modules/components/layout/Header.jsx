@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header className="header-with-topbar">
-      <div
+      {/* <div
         className="header-top-bar top-bar-dark cover-background"
         style={{
           backgroundImage: 'url("images/demo-hosting-header-bg.jpg")',
@@ -14,14 +14,13 @@ const Header = () => {
             <div className="col-md-7 text-center text-md-start">
               <div className="fs-13 text-white">
                 <span className="opacity-6 me-5px">
-                  Tailored solutions to boost your business
+                Get a head start on success—waitlist members gain early entry!
                 </span>
-                {/* <span className="fw-600">$2.78/mo*</span> */}
               </div>
             </div>
             <div className="col-5 text-end d-none d-md-flex">
               <a
-                href="demo-hosting-contact.html"
+                href="/"
                 className="widget fs-13 me-20px text-white opacity-8 d-none d-lg-inline-block"
               >
                 <i className="feather icon-feather-phone" />
@@ -37,9 +36,9 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* start navigation */}
-      {/* <nav
+      <nav
         className="navbar navbar-expand-lg header-transparent bg-transparent header-reverse"
         data-header-hover="light"
       >
@@ -47,19 +46,19 @@ const Header = () => {
           <div className="col-auto col-lg-2 me-lg-0 me-auto">
             <a className="navbar-brand" href="/">
               <img
-              src="images/logo/saprise-white.png"
+              src="logowhite2.png"
               data-at2x="images/demo-hosting-logo-white@2x.png"
               alt=""
               className="default-logo"
             />
             <img
-              src="images/logo/saprise-black.png"
+              src="logoblack2.png"
               data-at2x="images/demo-hosting-logo-black@2x.png"
               alt=""
               className="alt-logo"
             />
             <img
-              src="images/logo/saprise-black.png"
+              src="logoblack2.png"
               data-at2x="images/demo-hosting-logo-black@2x.png"
               alt=""
               className="mobile-logo"
@@ -67,7 +66,7 @@ const Header = () => {
 
             </a>
           </div>
-          <div className="col-auto menu-order position-static">
+          {/* <div className="col-auto menu-order position-static">
             <button
               className="navbar-toggler float-start"
               type="button"
@@ -117,8 +116,8 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="col-auto col-lg-2 text-end lg-pe-5px">
+          </div> */}
+          {/* <div className="col-auto col-lg-2 text-end lg-pe-5px">
             <div className="header-icon">
               <div className="header-button ms-30px xxl-ms-10px xs-ms-0">
                 <a
@@ -133,9 +132,9 @@ const Header = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-      </nav> */}
+      </nav>
       {/* end navigation */}
     </header>
   );

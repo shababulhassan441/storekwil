@@ -70,7 +70,7 @@ const Footer = () => {
          </div>
          {/* end footer column */}
          {/* start footer column */}
-         <div className="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">
+         {/* <div className="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">
            <span className="fs-17 fw-500 d-block text-white mb-5px">
              Company
            </span>
@@ -78,28 +78,19 @@ const Footer = () => {
              <li>
                <a href="/">Home</a>
              </li>
-             {/* <li>
-               <a href="/">About</a>
-             </li> */}
-             {/* <li>
-               <a href="/">Services</a>
-             </li> */}
            </ul>
-         </div>
+         </div> */}
          {/* end footer column */}
          {/* start footer column */}
-         <div className="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-4 order-lg-3">
+         <div className="col-6 col-lg-4 col-sm-4 xs-mb-30px order-sm-4 order-lg-3">
            <span className="fs-17 fw-500 d-block text-white mb-5px">
-             Customer
+             Address
            </span>
-           <ul>
-             <li>
-               <a href="/">Client support</a>
-             </li>
-             <li>
-               <a href="/">Help center</a>
-             </li>
-           </ul>
+           <div
+             className="text-white/60 lh-22 d-inline-flex"
+           >
+            167-169 Great Portland Street, 5th Floor, London, England, W1W 5PF
+           </div>
          </div>
          {/* end footer column */}
          {/* start footer column */}
@@ -110,22 +101,21 @@ const Footer = () => {
 
            <a
              href="mailto:info@sapriseconsultancy.com"
-             className="text-white lh-22  d-inline-block mb-10px"
+             className="text-white/60 lh-22  d-inline-block mb-10px"
            >
              info@storekwil.com
            </a>
            <a
              href="mailto:sales@sapriseconsultancy.com"
-             className="text-white lh-22  d-inline-block mb-20px"
+             className="text-white/60 lh-22  d-inline-block mb-20px"
            >
             sales@storekwil.com
            </a>
-           <span className="d-inline-flex w-100">Address</span>
+           <span className="d-inline-flex text-white w-100">Phone No</span>
            <div
-
-             className="text-white lh-22 d-inline-flex"
+             className="text-white/60 lh-22 d-inline-flex"
            >
-            
+           +44(0)20 3723 6703
            </div>
          </div>
        </div>

@@ -6825,7 +6825,7 @@ header .container-fluid {
   padding-right: 45px;
 }
 header.sticky .navbar-brand {
-  padding: 20px 0;
+  padding: 0 0;
 }
 header.sticky .navbar {
   -webkit-transform: translateY(-100%);
@@ -6905,7 +6905,8 @@ header.sticky.sticky-active [data-header-hover=dark] .header-language-icon .head
   opacity: 1;
 }
 header.sticky.sticky-active [data-header-hover=light] {
-  background-color: var(--white) !important;
+  background-color: white/[0.54] !important;
+  backdrop-filter: blur(20px);
   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
 }
 header.sticky.sticky-active [data-header-hover=light] .navbar-nav .nav-link {

@@ -38,7 +38,7 @@ const WaitlistForm = () => {
         // background: "linear-gradient(to right, #1c2663, #1a2a78)",
         padding: "20px",
         borderRadius: "8px",
-        color:"white"
+        color: "white",
       }}
     >
       <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
@@ -184,7 +184,7 @@ const WaitlistForm = () => {
           </p>
       </span> */}
 
-      <button
+      {/* <button
         type="submit"
         style={{
           backgroundColor: "#007bff",
@@ -196,6 +196,19 @@ const WaitlistForm = () => {
         }}
       >
         Sign Up
+      </button> */}
+      <button
+        class="btn btn-gradient-fast-blue-purple btn-switch-text btn-large left-icon btn-round-edge submit text-transform-none"
+        type="submit"
+      >
+        <span>
+          <span>
+            <i class="bi bi-calendar-check"></i>
+          </span>
+          <span class="btn-double-text" data-text="Sign Up">
+            Sign Up
+          </span>
+        </span>
       </button>
     </form>
   );

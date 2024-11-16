@@ -35,7 +35,7 @@ body{
     font-size: 15px;
 }
 header .navbar-brand img {
-    max-height: 36px;
+    max-height: 110px;
 }
 .sticky .header-transparent .header-button .btn {
     background-color: var(--dark-gray);
@@ -137,7 +137,7 @@ footer {
     padding-top: 100px;
 }
 footer .footer-logo img {
-    max-height: 32px;
+    max-height: 120px;
 }
 .footer-dark a:hover {
     color: var(--white);
