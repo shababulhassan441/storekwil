@@ -125,7 +125,7 @@ const Footer = () => {
 
              className="text-white lh-22 d-inline-flex"
            >
-            73 Central Ave, Albany NY 12206 USA
+            
            </div>
          </div>
        </div>
