@@ -127,7 +127,7 @@ const HeroSection = () => {
                       <img
                         data-atropos-offset={3}
                         className=" position-relative z-index-9 lg-w-80 md-w-90 sm-w-100"
-                        src="/globebg.png"
+                        src="/globebg.webp"
                         alt=""
                         data-anime='{ "translateY": [50, 0], "rotateX": [10, 0], "perspective": [1000,1200], "scale": [1.1, 1], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'
                       />
