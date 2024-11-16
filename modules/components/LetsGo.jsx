@@ -18,7 +18,7 @@ const LetsGo = () => {
             </a>{" "}
             for business success—join our waitlist today!
           </div>
-          <div className="col-lg-3 cta text-center bg-yellow pt-30px pb-30px md-p-20px">
+          <div className="col-lg-3 cta text-center background-yellow pt-30px pb-30px md-p-20px">
             <div
                onClick={() => {
                   document

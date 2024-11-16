@@ -41,12 +41,12 @@ const WhyChooseHead = () => {
         </div>
         <div className="row h-100 align-items-center justify-content-center">
           <div
-            className="col-xl-5 col-lg-6 animation-float text-center text-lg-start"
+            className=" intro-character col-xl-5  col-lg-5 animation-float text-center text-lg-end "
             data-anime='{ "translate": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
           >
             <img
-              src="float2.webp"
-              className="md-w-70 z-index-3 position-relative"
+              src="float4.png"
+              className="md-w-70 z-index-3 position-relative  "
               data-bottom-top="transform: translateX(-250px)"
               data-top-bottom="transform: translateX(250px)"
               alt=""

@@ -47,19 +47,19 @@ const Header = () => {
             <a className="navbar-brand" href="/">
               <img
               src="logowhite2.png"
-              data-at2x="images/demo-hosting-logo-white@2x.png"
+              // data-at2x="images/demo-hosting-logo-white@2x.png"
               alt=""
               className="default-logo"
             />
             <img
               src="logoblack2.png"
-              data-at2x="images/demo-hosting-logo-black@2x.png"
+              // data-at2x="images/demo-hosting-logo-black@2x.png"
               alt=""
               className="alt-logo"
             />
             <img
               src="logoblack2.png"
-              data-at2x="images/demo-hosting-logo-black@2x.png"
+              // data-at2x="images/demo-hosting-logo-black@2x.png"
               alt=""
               className="mobile-logo"
             />

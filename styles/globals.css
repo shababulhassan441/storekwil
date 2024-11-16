@@ -13,7 +13,8 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #df5e93, #62278d, #000f4c);
+  background: linear-gradient(135deg, #df5e93, #000f4c, #000f4c);
+  /* background: linear-gradient(135deg, #df5e93, #62278d, #000f4c); */
   opacity: 0.6; /* Medium opacity */
   pointer-events: none; /* Makes the overlay non-interactive */
 }
@@ -33,6 +34,16 @@ html {
 .sticky-active{
     background-color: black!important;
 }
+.background-yellow{
+  background-color: #ffea23;
+}
+.background-yellow:hover{
+    background-color: #ffea23;
+    color: black;
+}
 /* @import url("/app/revolution/css/settings.css");
 @import url("/app/revolution/css/layers.css");
 @import url("/app/revolution/css/navigation.css"); */
+.intro-character{
+    margin-top: 350px;
+}

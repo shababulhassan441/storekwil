@@ -1,12 +1,11 @@
-"use client"
+"use client";
 import React from "react";
-
 
 const HeroSection = () => {
   return (
     <section
       className="cover-background full-screen bg-dark-gray ipad-top-space-margin position-relative section-dark md-h-auto"
-      style={{ backgroundImage: 'url("hero-bg.jpg")' }}
+      //   style={{ backgroundImage: 'url("hero-bg.jpg")' }}
     >
       <div className="overlay"></div>
       <div
@@ -49,19 +48,19 @@ const HeroSection = () => {
                 <span className="fs-25 xl-fs-25 lg-fs-25 md-fs-20 xs-fs-16 fs-500 mb-0 text-white fw-300  d-block">
                   <span
                     className="fw-600"
-                    data-fancy-text='{ "effect": "slide", "direction": "right", "color": "#ffe400", "speed": 100, "string": ["Turn ambition into achievement with just a few clicks.", "Simplify your path from startup to star.", "The only platform you&apos;ll ever need to master the market"], "duration": 2500 }'
+                    data-fancy-text='{ "effect": "slide", "direction": "right", "color": "white", "speed": 100, "string": ["Turn ambition into achievement with just a few clicks.", "Simplify your path from startup to star.", "The only platform you&apos;ll ever need to master the market"], "duration": 2500 }'
                   />
                 </span>
               </span>
             </div>
             <div className="overflow-hidden pt-5px">
-              <div
+              {/* <div
                 onClick={() => {
                   document
                     .getElementById("waitlist")
                     .scrollIntoView({ behavior: "smooth" });
                 }}
-                className="btn btn-extra-large btn-yellow btn-rounded btn-box-shadow btn-switch-text d-inline-block me-15px xs-m-10px align-middle fw-600 scroll-smooth"
+                className="btn btn-extra-large background-yellow btn-rounded btn-box-shadow btn-switch-text d-inline-block me-15px xs-m-10px align-middle fw-600 scroll-smooth"
                 data-anime='{ "translateY": [100, 0], "easing": "easeOutCubic", "duration": 900, "delay": 500 }'
               >
                 <span>
@@ -75,20 +74,24 @@ const HeroSection = () => {
                     <i className="feather icon-feather-arrow-right" />
                   </span>
                 </span>
-              </div>
-              {/* <button
+              </div> */}
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("waitlist")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
                 class="btn btn-gradient-fast-blue-purple btn-switch-text btn-large left-icon btn-round-edge submit text-transform-none"
-                type="submit"
               >
                 <span>
                   <span>
                     <i class="bi bi-calendar-check"></i>
                   </span>
-                  <span class="btn-double-text" data-text="Book appointment">
-                    Book appointment
+                  <span class="btn-double-text" data-text="Join Our Waitlist">
+                    Join Our Waitlist
                   </span>
                 </span>
-              </button> */}
+              </button>
 
               {/* <div
               className="text-white fs-15 d-inline-block last-paragraph-no-margin align-middle"
@@ -106,12 +109,33 @@ const HeroSection = () => {
               className="outside-box-right-7 position-relative"
               data-anime='{ "opacity": [0, 1], "translateY": [100, 0], "easing": "easeOutQuad", "duration": 1200, "delay": 200 }'
             >
+              {/* <img className="w-100" src="globebg.png" alt="" /> */}
+              <div
+                className="col-md-12 position-relative atropos transform-3d"
+                data-atropos=""
+              >
+                <div className="atropos-scale">
+                  <div className="atropos-rotate">
+                    <div className="atropos-inner text-center">
+                      <div
+                        data-atropos-offset={-8}
+                        className="position-absolute left-0px right-0px top-100px lg-top-50px mx-auto"
+                        data-anime='{ "scale":[1.2,1], "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'
+                      >
+                        {/* <img className="opacity-25" src="/globebg.png" alt="" /> */}
+                      </div>
+                      <img
+                        data-atropos-offset={3}
+                        className=" position-relative z-index-9 lg-w-80 md-w-90 sm-w-100"
+                        src="/globebg.png"
+                        alt=""
+                        data-anime='{ "translateY": [50, 0], "rotateX": [10, 0], "perspective": [1000,1200], "scale": [1.1, 1], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
               {/* <img
-                className="w-100"
-                src="/images/demo-hosting-home-slider-01.webp"
-                alt=""
-              />
-              <img
                 className="w-100 position-absolute left-minus-2px top-minus-5px animation-float"
                 src="/images/demo-hosting-home-slider-02.webp"
                 alt=""
