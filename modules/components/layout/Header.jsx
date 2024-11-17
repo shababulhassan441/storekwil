@@ -1,6 +1,7 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({headerData}) => {
+  const {logoWhite,logoBlack} = headerData
   return (
     <header className="header-with-topbar">
       {/* <div
@@ -46,19 +47,19 @@ const Header = () => {
           <div className="col-auto col-lg-2 me-lg-0 me-auto">
             <a className="navbar-brand" href="/">
               <img
-              src="logowhite2.png"
+              src={logoWhite || ""}
               // data-at2x="images/demo-hosting-logo-white@2x.png"
               alt=""
               className="default-logo"
             />
             <img
-              src="logoblack2.png"
+              src={logoBlack || ""}
               // data-at2x="images/demo-hosting-logo-black@2x.png"
               alt=""
               className="alt-logo"
             />
             <img
-              src="logoblack2.png"
+              src={logoBlack || ""}
               // data-at2x="images/demo-hosting-logo-black@2x.png"
               alt=""
               className="mobile-logo"

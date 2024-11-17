@@ -47,3 +47,26 @@ html {
 .intro-character{
     margin-top: 350px;
 }
+
+.alert-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.25rem 0.5rem;
+
+  width: fit-content;
+  margin: 0.25rem auto 0;
+  font-size: 0.875rem; /* Tailwind's text-sm */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alert-box.error{
+  color: #e11d48; /* Tailwind's red-600 */
+  border-left: 4px solid #e11d48; /* Tailwind's red-600 */
+  background-color: #fee2e2; /* Tailwind's red-100 */
+}
+.alert-box.success{
+  color: #059669; /* Tailwind's red-600 */
+  border-left: 4px solid #059669; /* Tailwind's red-600 */
+  background-color: #dcfce7; /* Tailwind's red-100 */
+}

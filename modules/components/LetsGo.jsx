@@ -1,7 +1,9 @@
 "use client"
 import React from "react";
 
-const LetsGo = () => {
+const LetsGo = ({heroCta}) => {
+
+  const {ctaText} = heroCta
   return (
     <section
       className="bg-very-light-gray pt-20px pb-20px sm-pt-40px"
@@ -10,13 +12,13 @@ const LetsGo = () => {
       <div className="container overlap-section">
         <div className="row justify-content-center overlap-section border-radius-6px overflow-hidden g-0 box-shadow-extra-large">
           <div className="col-lg-9 text-center fw-600 fs-24 lg-fs-22 ls-minus-05px text-dark-gray bg-white p-30px md-p-20px">
-            <a
+            {/* <a
               href="/"
               className="fw-700 text-base-color text-decoration-line-bottom-medium"
             >
               Be first in line
-            </a>{" "}
-            for business success—join our waitlist today!
+            </a>{" "} */}
+            {ctaText || ""}
           </div>
           <div className="col-lg-3 cta text-center background-yellow pt-30px pb-30px md-p-20px">
             <div

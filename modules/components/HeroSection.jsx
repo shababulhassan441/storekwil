@@ -1,7 +1,10 @@
 "use client";
 import React from "react";
 
-const HeroSection = () => {
+const HeroSection = ({heroData}) => {
+  const {  title,tagLines,hero_image}= heroData
+
+
   return (
     <section
       className="cover-background full-screen bg-dark-gray ipad-top-space-margin position-relative section-dark md-h-auto"
@@ -30,7 +33,7 @@ const HeroSection = () => {
                   data-shadow-animation="true"
                   data-animation-delay={1500}
                 >
-                  Empower Your Business with Storekwil
+                  {title || ""}
                   <span>
                     <img src="highlight-separator.svg" alt="" />
                   </span>
@@ -48,40 +51,19 @@ const HeroSection = () => {
                 <span className="fs-25 xl-fs-25 lg-fs-25 md-fs-20 xs-fs-16 fs-500 mb-0 text-white fw-300  d-block">
                   <span
                     className="fw-600"
-                    data-fancy-text='{ "effect": "slide", "direction": "right", "color": "white", "speed": 100, "string": ["Turn ambition into achievement with just a few clicks.", "Simplify your path from startup to star.", "The only platform you&apos;ll ever need to master the market"], "duration": 2500 }'
+                    data-fancy-text={`{ "effect": "slide", "direction": "right", "color": "white", "speed": 100, "string": [${tagLines?.map((line) => `"${line}"`).join(", ")}], "duration": 2500 }`}
                   />
                 </span>
               </span>
             </div>
             <div className="overflow-hidden pt-5px">
-              {/* <div
-                onClick={() => {
-                  document
-                    .getElementById("waitlist")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
-                className="btn btn-extra-large background-yellow btn-rounded btn-box-shadow btn-switch-text d-inline-block me-15px xs-m-10px align-middle fw-600 scroll-smooth"
-                data-anime='{ "translateY": [100, 0], "easing": "easeOutCubic", "duration": 900, "delay": 500 }'
-              >
-                <span>
-                  <span
-                    className="btn-double-text"
-                    data-text="Join Our Waitlist"
-                  >
-                    Join Our Waitlist
-                  </span>
-                  <span>
-                    <i className="feather icon-feather-arrow-right" />
-                  </span>
-                </span>
-              </div> */}
               <button
                 onClick={() => {
                   document
                     .getElementById("waitlist")
                     .scrollIntoView({ behavior: "smooth" });
                 }}
-                class="btn btn-gradient-fast-blue-purple btn-switch-text btn-large left-icon btn-round-edge submit text-transform-none"
+                className="btn btn-gradient-fast-blue-purple btn-switch-text btn-large left-icon btn-round-edge submit text-transform-none"
               >
                 <span>
                   <span>
@@ -127,7 +109,7 @@ const HeroSection = () => {
                       <img
                         data-atropos-offset={3}
                         className=" position-relative z-index-9 lg-w-80 md-w-90 sm-w-100"
-                        src="/globebg.webp"
+                        src={hero_image || ""}
                         alt=""
                         data-anime='{ "translateY": [50, 0], "rotateX": [10, 0], "perspective": [1000,1200], "scale": [1.1, 1], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'
                       />

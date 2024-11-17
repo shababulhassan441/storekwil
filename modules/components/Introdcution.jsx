@@ -1,7 +1,9 @@
-"use client"
+"use client";
 import React from "react";
 
-const Introdcution = () => {
+const Introdcution = ({ introData }) => {
+  const { title, subTitle, para, introImage, points, bannerPoints,bannerIcons } = introData;
+  console.log(bannerIcons)
   return (
     <section className="overflow-hidden">
       <div className="container">
@@ -29,7 +31,7 @@ const Introdcution = () => {
                         <img
                           data-atropos-offset={3}
                           className=" position-relative z-index-9 lg-w-80 md-w-90 sm-w-100"
-                          src="/intro7.webp"
+                          src={introImage || ""}
                           alt=""
                           data-anime='{ "translateY": [50, 0], "rotateX": [10, 0], "perspective": [1000,1200], "scale": [1.1, 1], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'
                         />
@@ -45,38 +47,24 @@ const Introdcution = () => {
             data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 900, "delay": 300, "easing": "easeOutCirc" }'
           >
             <span className="text-base-color fw-600 mb-15px text-uppercase d-block">
-              Storekwil Business One
+              {subTitle || ""}
             </span>
             <h2 className="fw-600 text-dark-gray w-90 lg-w-100 text-dark-gray fw-700 ls-minus-2px">
-              Introduction:
+              {title || ""}
             </h2>
-            <p className="w-90 sm-w-100">
-              Experience the future of business management today. Our
-              comprehensive platform provides everything from website building
-              to global banking facilities, all designed to streamline your
-              operations and empower your growth. Join our waitlist today and be
-              among the first to experience the power of unified business
-              solutions.
-            </p>
+            <p className="w-90 sm-w-100">{para || ""}</p>
             <ul className="p-0 mb-25px mt-15px list-style-01 w-90 lg-w-100">
-              <li className="border-color-extra-medium-gray fw-600 text-dark-gray d-flex align-items-center pt-15px pb-15px">
-                <div className="feature-box-icon feature-box-icon-rounded w-35px h-35px rounded-circle bg-solitude-blue me-10px text-center d-flex align-items-center justify-content-center flex-shrink-0">
-                  <i className="fa-solid fa-check fs-13 text-base-color" />
-                </div>
-                Whether you're launching your first online store
-              </li>
-              <li className="border-color-extra-medium-gray fw-600 text-dark-gray d-flex align-items-center pt-15px pb-15px">
-                <div className="feature-box-icon feature-box-icon-rounded w-35px h-35px rounded-circle bg-solitude-blue me-10px text-center d-flex align-items-center justify-content-center flex-shrink-0">
-                  <i className="fa-solid fa-check fs-13 text-base-color" />
-                </div>
-                looking to scale an established brand
-              </li>
-              <li className="border-color-extra-medium-gray fw-600 text-dark-gray d-flex align-items-center pt-15px pb-15px">
-                <div className="feature-box-icon feature-box-icon-rounded w-35px h-35px rounded-circle bg-solitude-blue me-10px text-center d-flex align-items-center justify-content-center flex-shrink-0">
-                  <i className="fa-solid fa-check fs-13 text-base-color" />
-                </div>
-                so you can focus on what you do best.
-              </li>
+              {points?.map((point, index) => (
+                <li
+                  key={index}
+                  className="border-color-extra-medium-gray fw-600 text-dark-gray d-flex align-items-center pt-15px pb-15px"
+                >
+                  <div className="feature-box-icon feature-box-icon-rounded w-35px h-35px rounded-circle bg-solitude-blue me-10px text-center d-flex align-items-center justify-content-center flex-shrink-0">
+                    <i className="fa-solid fa-check fs-13 text-base-color" />
+                  </div>
+                  {point || ""}
+                </li>
+              ))}
             </ul>
 
             <div
@@ -103,42 +91,28 @@ const Introdcution = () => {
           data-bottom-top="transform:scale(1.1, 1.1) translateY(30px);"
           data-top-bottom="transform:scale(1, 1) translateY(-30px);"
         >
-          {/* start process step item */}
-          <div className="col-lg-4 col-md-6 process-step-style-07 position-relative md-mb-30px">
-            <div className="process-step-item d-flex align-items-center">
-              <div className="process-step-icon-wrap position-relative">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px  fs-17 fw-500">
-                  <img src="problem.svg" className="h-50px" alt="" />
+          {bannerPoints.map((point, index) => (
+            <div
+              key={index}
+              className="col-lg-4 col-md-6 process-step-style-07 position-relative"
+            >
+              <div className="process-step-item d-flex align-items-center">
+                <div className="process-step-icon-wrap position-relative">
+                  <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px fs-17 fw-500">
+                    <img src={bannerIcons?.[index] || ""} className="h-50px" alt="image" />
+                  </div>
+                </div>
+                <div className="process-content ps-20px last-paragraph-no-margin">
+                  <span className="d-block fw-600 text-dark-gray fs-17 ls-minus-05px alt-font">
+                    {point}
+                  </span>
                 </div>
               </div>
-              <div className="process-content ps-20px last-paragraph-no-margin">
-                <span className="d-block fw-600 text-dark-gray fs-17 ls-minus-05px alt-font">
-                  "Simplify your path from startup to star"
-                </span>
-                {/* <p>Lorem ipsum simply printing</p> */}
-              </div>
             </div>
-          </div>
+          ))}
           {/* end process step item */}
           {/* start process step item */}
-          <div className="col-lg-4 col-md-6 process-step-style-07 position-relative md-mb-30px">
-            <div className="process-step-item d-flex align-items-center">
-              <div className="process-step-icon-wrap position-relative">
-                <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px  fs-17 fw-500">
-                  <img src="solution.svg" className="h-50px" alt="" />
-                </div>
-              </div>
-              <div className="process-content ps-20px last-paragraph-no-margin">
-                <span className="d-block fw-600 text-dark-gray fs-17 ls-minus-05px alt-font">
-                  "Step into the future of business management."
-                </span>
-                {/* <p>Lorem ipsum simply printing</p> */}
-              </div>
-            </div>
-          </div>
-          {/* end process step item */}
-          {/* start process step item */}
-          <div className="col-lg-4 col-md-6 process-step-style-07 position-relative">
+          {/* <div className="col-lg-4 col-md-6 process-step-style-07 position-relative">
             <div className="process-step-item d-flex align-items-center">
               <div className="process-step-icon-wrap position-relative">
                 <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px  fs-17 fw-500">
@@ -149,10 +123,9 @@ const Introdcution = () => {
                 <span className="d-block fw-600 text-dark-gray fs-17 ls-minus-05px alt-font">
                   "Lead the market. Leave the complexity to us"
                 </span>
-                {/* <p>Lorem ipsum simply printing</p> */}
               </div>
             </div>
-          </div>
+          </div> */}
           {/* end process step item */}
         </div>
       </div>

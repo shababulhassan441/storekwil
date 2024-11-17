@@ -1,3 +1,4 @@
+import { fetchData } from "@/appwrite/data";
 import CalltoAction from "@/modules/components/CalltoAction";
 import HeroSection from "@/modules/components/HeroSection";
 import Introdcution from "@/modules/components/Introdcution";
@@ -5,29 +6,35 @@ import JoinOurWaitlist from "@/modules/components/JoinOurWaitlist";
 import KeyFeatures from "@/modules/components/KeyFeatures";
 import StickyElements from "@/modules/components/layout/StickyElements";
 import LetsGo from "@/modules/components/LetsGo";
-import WaitList from "@/modules/components/WaitList";
 import WhyChooseHead from "@/modules/components/WhyChooseHead";
 import WhyChooseus from "@/modules/components/WhyChooseus";
 
-export default function Home() {
+
+
+export const fetchCache = 'force-no-store';
+
+export default async function Home() {
+ 
+  const data=await fetchData()
+
   return (
     <>
-      <HeroSection />
+      <HeroSection heroData={data.HeroContent}/>
 
-      <LetsGo />
+      <LetsGo heroCta={data.HeroContent} />
 
-      <Introdcution />
+      <Introdcution introData={data.IntroductionData} />
 
-      <WhyChooseHead />
-      <WhyChooseus />
+      <WhyChooseHead WhyHead={data.WhyHead} />
 
-      <KeyFeatures />
+      <WhyChooseus whyCards={data.whyCards} />
 
-      {/* <CalltoAction /> */}
-      {/* <WaitList /> */}
-      <JoinOurWaitlist />
+      <KeyFeatures headData={data.keyfeaturesHeadData} cardData={data.keyfeaturesCardsData} />
 
-      <StickyElements />
+      <JoinOurWaitlist waitList={data.WaitListData} />
+
+      <StickyElements linksUrl={data.stickyLinksUrl} />
     </>
   );
 }
+

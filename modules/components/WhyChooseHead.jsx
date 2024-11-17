@@ -1,6 +1,7 @@
 import React from "react";
 
-const WhyChooseHead = () => {
+const WhyChooseHead = ({WhyHead}) => {
+  const {floatHead,backgroundHead,float1,float2,float3} = WhyHead
   return (
     <section className="pb-0 full-screen md-h-auto overflow-hidden position-relative">
       <img
@@ -21,7 +22,7 @@ const WhyChooseHead = () => {
         <div className="position-absolute top-150px left-150px animation-rotation d-none d-sm-block">
           <img
             className="lg-w-140px"
-            src="float1.webp"
+            src={float1 || ""}
             data-bottom-top="transform: rotate(-50deg) translateY(-50px)"
             data-top-bottom="transform:rotate(10deg) translateY(50px)"
             alt=""
@@ -30,14 +31,14 @@ const WhyChooseHead = () => {
         <div className="position-absolute bottom-150px right-150px animation-rotation d-none d-sm-block">
           <img
             className="lg-w-120px"
-            src="float3.webp"
+            src={float3 || ""}
             data-bottom-top="transform: rotate(-10deg) translateX(-80px)"
             data-top-bottom="transform:rotate(10deg) translateX(80px)"
             alt=""
           />
         </div>
         <div className="fs-400 position-absolute absolute-middle-center fw-600 text-nowrap ls-minus-10px text-extra-medium-gray opacity-3 z-index-minus-2">
-          storekwil
+          {backgroundHead || ""}
         </div>
         <div className="row h-100 align-items-center justify-content-center">
           <div
@@ -45,7 +46,7 @@ const WhyChooseHead = () => {
             data-anime='{ "translate": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
           >
             <img
-              src="float4.png"
+              src={float2 || ""}
               className="md-w-70 z-index-3 position-relative  "
               data-bottom-top="transform: translateX(-250px)"
               data-top-bottom="transform: translateX(250px)"
@@ -54,7 +55,7 @@ const WhyChooseHead = () => {
           </div>
 
           <div className="marquees-text fs-160 ls-minus-5px fw-600 text-nowrap text-dark-gray position-absolute left-minus-150px z-index-minus-1">
-            Why Choose Us
+            {floatHead || ""}
           </div>
         </div>
       </div>

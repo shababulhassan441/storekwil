@@ -1,6 +1,8 @@
 import React from 'react'
 
-const StickyElements = () => {
+const StickyElements = ({linksUrl}) => {
+  const {facebook,instagram,linkedin,twitter} = linksUrl
+  console.log(linksUrl)
   return (
     <>
       {/* start sticky elements */}
@@ -14,7 +16,7 @@ const StickyElements = () => {
               <li className="me-30px">
                 <a
                   className="facebook"
-                  href="https://www.facebook.com/"
+                  href={facebook}
                   target="_blank"
                 >
                   <i className="fa-brands fa-facebook-f me-10px" />
@@ -24,17 +26,17 @@ const StickyElements = () => {
               <li className="me-30px">
                 <a
                   className="linkedin"
-                  href="https://www.linkedin.com/"
+                  href={linkedin}
                   target="_blank"
                 >
                   <i className="fa-brands fa-linkedin-in me-10px" />
-                  <span className="alt-font">Dribbble</span>
+                  <span className="alt-font">Linkedin</span>
                 </a>
               </li>
               <li className="me-30px">
                 <a
                   className="twitter"
-                  href="http://www.twitter.com"
+                  href={twitter}
                   target="_blank"
                 >
                   <i className="fa-brands fa-twitter me-10px" />
@@ -44,7 +46,7 @@ const StickyElements = () => {
               <li>
                 <a
                   className="instagram"
-                  href="http://www.instagram.com"
+                  href={instagram}
                   target="_blank"
                 >
                   <i className="fa-brands fa-instagram me-10px" />

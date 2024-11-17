@@ -5,6 +5,7 @@ import Header from "@/modules/components/layout/Header";
 import Footer from "@/modules/components/layout/Footer";
 import ScrollProgress from "@/modules/components/layout/ScrollProgress";
 import CustomScripts from "@/modules/scripts/CustomScripts";
+import { fetchheaderFooter } from '@/appwrite/data';
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +16,8 @@ export const metadata = {
     "Your Gateway to cutting-edge Innovative Web Solutions ",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const data = await fetchheaderFooter();
   return (
     <html lang="en">
       <body
@@ -23,9 +25,9 @@ export default function RootLayout({ children }) {
         data-mobile-nav-bg-color=""
         className={`${inter.className} antialiased`}
       >
-        <Header/>
+        <Header headerData={data.headerData} />
         {children}
-        <Footer/>
+        <Footer footerData={data.footerData} />
         <ScrollProgress/>
         <CustomScripts/>
       </body>
