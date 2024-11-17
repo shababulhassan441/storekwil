@@ -10,14 +10,6 @@ const Introdcution = () => {
             className="col-lg-6 col-md-10 position-relative md-mb-30px"
             data-anime='{ "effect": "slide", "color": "#ffffff", "direction":"lr", "easing": "easeOutQuad", "delay":50}'
           >
-            {/* <img
-                className="w-100"
-                src="/images/SAP-Business-One-Core.webp"
-                data-bottom-top="transform: translateY(-50px)"
-                data-top-bottom="transform: translateY(50px)"
-                alt=""
-              /> */}
-
             <div className="container h-100 position-relative">
               <div className="row align-items-center justify-content-center text-center h-100">
                 <div
@@ -32,11 +24,7 @@ const Introdcution = () => {
                           className="position-absolute left-0px right-0px top-100px lg-top-50px mx-auto"
                           data-anime='{ "scale":[1.2,1], "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'
                         >
-                          <img
-                            className=""
-                            src="/dots.png"
-                            alt=""
-                          />
+                          <img className="" src="/dots.png" alt="" />
                         </div>
                         <img
                           data-atropos-offset={3}
@@ -90,19 +78,7 @@ const Introdcution = () => {
                 so you can focus on what you do best.
               </li>
             </ul>
-            {/* <a
-              href="#waitlist"
-              className="btn btn-large btn-dark-gray btn-box-shadow btn-rounded btn-switch-text"
-            >
-              <span>
-                <span className="btn-double-text" data-text="Join Waitlist">
-                  Join Waitlist
-                </span>
-                <span>
-                  <i className="feather icon-feather-arrow-right" />
-                </span>
-              </span>
-            </a> */}
+
             <div
               onClick={() => {
                 document
@@ -132,7 +108,7 @@ const Introdcution = () => {
             <div className="process-step-item d-flex align-items-center">
               <div className="process-step-icon-wrap position-relative">
                 <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px  fs-17 fw-500">
-                  <img src="images/problem.svg" className="h-50px" alt="" />
+                  <img src="problem.svg" className="h-50px" alt="" />
                 </div>
               </div>
               <div className="process-content ps-20px last-paragraph-no-margin">
@@ -149,7 +125,7 @@ const Introdcution = () => {
             <div className="process-step-item d-flex align-items-center">
               <div className="process-step-icon-wrap position-relative">
                 <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px  fs-17 fw-500">
-                  <img src="images/solution.svg" className="h-50px" alt="" />
+                  <img src="solution.svg" className="h-50px" alt="" />
                 </div>
               </div>
               <div className="process-content ps-20px last-paragraph-no-margin">
@@ -166,7 +142,7 @@ const Introdcution = () => {
             <div className="process-step-item d-flex align-items-center">
               <div className="process-step-icon-wrap position-relative">
                 <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px  fs-17 fw-500">
-                  <img src="images/growth.svg" className="h-50px" alt="" />
+                  <img src="growth.svg" className="h-50px" alt="" />
                 </div>
               </div>
               <div className="process-content ps-20px last-paragraph-no-margin">

@@ -32,7 +32,7 @@ const HeroSection = () => {
                 >
                   Empower Your Business with Storekwil
                   <span>
-                    <img src="images/highlight-separator.svg" alt="" />
+                    <img src="highlight-separator.svg" alt="" />
                   </span>
                 </div>
               </div>

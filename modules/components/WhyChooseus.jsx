@@ -29,7 +29,7 @@ const WhyChooseus = () => {
             <div className="bg-white feature-box h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover text-start p-17 sm-p-14 border-radius-6px">
               <div className="feature-box-icon mb-30px">
                 <img
-                  src="images/demo-hosting-home-icon-02.svg"
+                  src="demo-hosting-home-icon-02.svg"
                   className="h-50px"
                   alt=""
                 />
@@ -42,20 +42,7 @@ const WhyChooseus = () => {
                   At Storekwil, we're pushing the boundaries of what a business
                   platform can do.
                 </p>
-                {/* <a
-                    href="/about"
-                    className="btn btn-link btn-hover-animation-switch btn-extra-large text-base-color text-uppercase-inherit"
-                  >
-                    <span>
-                      <span className="btn-text">Learn more</span>
-                      <span className="btn-icon">
-                        <i className="feather icon-feather-arrow-right" />
-                      </span>
-                      <span className="btn-icon">
-                        <i className="feather icon-feather-arrow-right" />
-                      </span>
-                    </span>
-                  </a> */}
+                
               </div>
             </div>
           </div>
@@ -65,7 +52,7 @@ const WhyChooseus = () => {
             <div className="bg-white feature-box h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover text-start p-17 sm-p-14 border-radius-6px">
               <div className="feature-box-icon mb-30px">
                 <img
-                  src="images/demo-hosting-home-icon-03.svg"
+                  src="demo-hosting-home-icon-03.svg"
                   className="h-50px"
                   alt=""
                 />
@@ -78,20 +65,7 @@ const WhyChooseus = () => {
                   Why juggle multiple tools when you can have everything in one
                   place
                 </p>
-                {/* <a
-                    href="/about"
-                    className="btn btn-link btn-hover-animation-switch btn-extra-large text-base-color text-uppercase-inherit"
-                  >
-                    <span>
-                      <span className="btn-text">Learn more</span>
-                      <span className="btn-icon">
-                        <i className="feather icon-feather-arrow-right" />
-                      </span>
-                      <span className="btn-icon">
-                        <i className="feather icon-feather-arrow-right" />
-                      </span>
-                    </span>
-                  </a> */}
+                
               </div>
             </div>
           </div>
@@ -101,7 +75,7 @@ const WhyChooseus = () => {
             <div className="bg-white feature-box h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover text-start p-17 sm-p-14 border-radius-6px">
               <div className="feature-box-icon mb-30px">
                 <img
-                  src="images/demo-hosting-home-icon-04.svg"
+                  src="demo-hosting-home-icon-04.svg"
                   className="h-50px"
                   alt=""
                 />
@@ -114,20 +88,7 @@ const WhyChooseus = () => {
                   Expand your business across borders without losing the local
                   appeal.
                 </p>
-                {/* <a
-                    href="/about"
-                    className="btn btn-link btn-hover-animation-switch btn-extra-large text-base-color text-uppercase-inherit"
-                  >
-                    <span>
-                      <span className="btn-text">Learn more</span>
-                      <span className="btn-icon">
-                        <i className="feather icon-feather-arrow-right" />
-                      </span>
-                      <span className="btn-icon">
-                        <i className="feather icon-feather-arrow-right" />
-                      </span>
-                    </span>
-                  </a> */}
+                
               </div>
             </div>
           </div>
@@ -137,7 +98,7 @@ const WhyChooseus = () => {
             <div className="bg-white feature-box h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover text-start p-17 sm-p-14 border-radius-6px">
               <div className="feature-box-icon mb-30px">
                 <img
-                  src="images/demo-hosting-home-icon-05.svg"
+                  src="demo-hosting-home-icon-05.svg"
                   className="h-50px"
                   alt=""
                 />
@@ -173,7 +134,7 @@ const WhyChooseus = () => {
             <div className="bg-white feature-box h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover text-start p-17 sm-p-14 border-radius-6px">
               <div className="feature-box-icon mb-30px">
                 <img
-                  src="images/demo-hosting-home-icon-05.svg"
+                  src="demo-hosting-home-icon-05.svg"
                   className="h-50px"
                   alt=""
                 />
@@ -208,7 +169,7 @@ const WhyChooseus = () => {
             <div className="bg-white feature-box h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover text-start p-17 sm-p-14 border-radius-6px">
               <div className="feature-box-icon mb-30px">
                 <img
-                  src="images/demo-hosting-home-icon-05.svg"
+                  src="demo-hosting-home-icon-05.svg"
                   className="h-50px"
                   alt=""
                 />
@@ -244,7 +205,7 @@ const WhyChooseus = () => {
             <div className="bg-white feature-box h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover text-start p-17 sm-p-14 border-radius-6px">
               <div className="feature-box-icon mb-30px">
                 <img
-                  src="images/demo-hosting-home-icon-05.svg"
+                  src="demo-hosting-home-icon-05.svg"
                   className="h-50px"
                   alt=""
                 />
@@ -280,7 +241,7 @@ const WhyChooseus = () => {
             <div className="bg-white feature-box h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover text-start p-17 sm-p-14 border-radius-6px">
               <div className="feature-box-icon mb-30px">
                 <img
-                  src="images/demo-hosting-home-icon-05.svg"
+                  src="demo-hosting-home-icon-05.svg"
                   className="h-50px"
                   alt=""
                 />

@@ -7,7 +7,7 @@ const Footer = () => {
       <footer
      className="footer-dark bg-dark-blue pb-0 cover-background background-position-left-top"
      style={{
-       backgroundImage: 'url("images/demo-hosting-footer-bg.jpg")',
+       backgroundImage: 'url("demo-hosting-footer-bg.jpg")',
      }}
    >
      <div className="container">

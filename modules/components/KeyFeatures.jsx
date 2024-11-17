@@ -4,7 +4,7 @@ const KeyFeatures = () => {
   return (
     <section
         className="cover-background section-dark bg-midnight-dark-blue"
-        style={{ backgroundImage: `linear-gradient(135deg, #df5e93, #62278d, #000f4c), url("images/demo-hosting-home-02.png")` }}
+        style={{ backgroundImage: `linear-gradient(135deg, #df5e93, #62278d, #000f4c), url("demo-hosting-home-02.png")` }}
         data-0-top="background-color:rgb(25,30,61);"
         data-center-bottom="background-color:rgb(14,16,29);"
       >
