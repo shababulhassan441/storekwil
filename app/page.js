@@ -1,3 +1,6 @@
+
+
+
 import { fetchData } from "@/appwrite/data";
 import CalltoAction from "@/modules/components/CalltoAction";
 import HeroSection from "@/modules/components/HeroSection";
@@ -8,13 +11,15 @@ import StickyElements from "@/modules/components/layout/StickyElements";
 import LetsGo from "@/modules/components/LetsGo";
 import WhyChooseHead from "@/modules/components/WhyChooseHead";
 import WhyChooseus from "@/modules/components/WhyChooseus";
+import { cookies } from "next/headers";
 
 
 
-export const fetchCache = 'force-no-store';
+
+
 
 export default async function Home() {
- 
+ cookies()
   const data=await fetchData()
 
   return (
