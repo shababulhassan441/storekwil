@@ -2,7 +2,6 @@ import React from 'react'
 
 const StickyElements = ({linksUrl}) => {
   const {facebook,instagram,linkedin,twitter} = linksUrl
-  console.log(linksUrl)
   return (
     <>
       {/* start sticky elements */}

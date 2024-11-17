@@ -3,7 +3,6 @@ import React from "react";
 
 const Introdcution = ({ introData }) => {
   const { title, subTitle, para, introImage, points, bannerPoints,bannerIcons } = introData;
-  console.log(bannerIcons)
   return (
     <section className="overflow-hidden">
       <div className="container">
