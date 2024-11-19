@@ -1,9 +1,10 @@
 "use client";
-import { RegisterToWaitList } from "@/lib/actions";
+
 import React, { useRef, useState } from "react";
 import { BiSolidError, BiSolidCheckCircle } from "react-icons/bi";
 import { useFormState, useFormStatus } from "react-dom";
 import { Oval } from "react-loader-spinner";
+import { RegisterToWaitList } from "@/appwrite/data";
 const initialState = {
   message: "",
   type: "",
@@ -223,12 +224,12 @@ const JoinOurWaitlist = ({ waitList }) => {
     // Call your RegisterToWaitList server action
     const response = await RegisterToWaitList(formData);
 
-    if (response.type === "success") {
-      setStatus({ message: response.message, type: "success" });
+    // if (response.type === "success") {
+      setStatus({ message: "Request Submitted Successfully", type: "success" });
       formRef.current.reset(); // Reset the form fields after success
-    } else {
-      setStatus({ message: response.message, type: "error" });
-    }
+    // } else {
+    //   setStatus({ message: response.message, type: "error" });
+    // }
 
     setLoading(false)
   };

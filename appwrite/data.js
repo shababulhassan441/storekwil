@@ -1,4 +1,5 @@
 import { createAdminClient } from "@/appwrite/config";
+import { ID } from "node-appwrite";
 
 
 export async function fetchData() {
@@ -106,4 +107,33 @@ export async function fetchheaderFooter() {
   } catch (error) {
     console.error("fetchCardData:", error);
   }
+}
+
+export async function RegisterToWaitList(formData) {
+
+  const data = Object.fromEntries(formData);
+  const {firstName,lastName,email,company,country,telephone } = data;
+
+  console.log(firstName,lastName,email,company,country,telephone)
+
+  try {
+
+    const {  databases } = await createAdminClient();
+
+   await databases.createDocument(
+      process.env.NEXT_PUBLIC_DATABASE_ID,
+      process.env.NEXT_PUBLIC_COLLECTION_ID_WAITLIST,
+      ID.unique(),
+      {
+        firstName,lastName,email,company,country,telephone
+       
+      }
+    );
+    
+    return { message: "Request submitted Successfully!" , type:"success"};
+  } catch (error) {
+    console.error("ERROR RegisterToWaitList", error);
+    return { message: error?.message, type:"error"};
+  }
+
 }

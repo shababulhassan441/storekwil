@@ -6,7 +6,7 @@ const ScrollProgress = () => {
       {/* start scroll progress */}
       <div className="scroll-progress d-none d-xxl-block">
           <a href="#" className="scroll-top" aria-label="scroll">
-            <span className="scroll-text">Scroll</span>
+            <span className="scroll-text">Scroll To Top</span>
             <span className="scroll-line">
               <span className="scroll-point" />
             </span>
