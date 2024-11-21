@@ -4,6 +4,7 @@
 @import url("./css/responsive.css");
 @import url("./css/hosting.css");
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,34 +19,34 @@ html {
   opacity: 0.6; /* Medium opacity */
   pointer-events: none; /* Makes the overlay non-interactive */
 }
-.agreementcheck{
-    display: flex;
-    align-items:center;
-    justify-content: start;
-    gap: 10px;
+.agreementcheck {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
 }
 
-.agreementcheck input{
-    width: 20px;
+.agreementcheck input {
+  width: 20px;
 }
-.cta{
-    cursor: pointer;
+.cta {
+  cursor: pointer;
 }
-.sticky-active{
-    background-color: black!important;
+.sticky-active {
+  background-color: black !important;
 }
-.background-yellow{
+.background-yellow {
   background-color: #ffea23;
 }
-.background-yellow:hover{
-    background-color: #ffea23;
-    color: black;
+.background-yellow:hover {
+  background-color: #ffea23;
+  color: black;
 }
 /* @import url("/app/revolution/css/settings.css");
 @import url("/app/revolution/css/layers.css");
 @import url("/app/revolution/css/navigation.css"); */
-.intro-character{
-    margin-top: 350px;
+.intro-character {
+  margin-top: 350px;
 }
 
 .alert-box {
@@ -60,13 +61,37 @@ html {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.alert-box.error{
+.alert-box.error {
   color: #e11d48; /* Tailwind's red-600 */
   border-left: 4px solid #e11d48; /* Tailwind's red-600 */
   background-color: #fee2e2; /* Tailwind's red-100 */
 }
-.alert-box.success{
+.alert-box.success {
   color: #059669; /* Tailwind's red-600 */
   border-left: 4px solid #059669; /* Tailwind's red-600 */
   background-color: #dcfce7; /* Tailwind's red-100 */
 }
+
+
+.maxwidth-large{
+  max-width: 1400px;
+  margin: 0 auto;
+} 
+
+.maxwidth-medium{
+  max-width: 1300px;
+  margin: 0 auto;
+
+}
+.padding-y{
+  padding-top:32px ;
+  padding-bottom:32px ;
+}
+.padding-x{
+  padding-left:32px ;
+  padding-right:32px ;
+}
+.btn-wrapper{
+  width: 100%;
+}
+
