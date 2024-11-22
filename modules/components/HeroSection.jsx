@@ -18,7 +18,7 @@ const HeroSection = ({heroData}) => {
         data-particle-options='{"particles": {"number": {"value": 22,"density": {"enable": true,"value_area": 2000}},"color": {"value": ["#10ffff", "#0bb1ff", "#10ffff", "#0bb1ff"]},"shape": {"type": "edge","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.8,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 10,"random": true,"anim": {"enable": false,"sync": true}},"line_linked":{"enable":true,"distance":10,"color":"#ffffff","opacity":0.4,"width":1},"move": {"enable": true,"speed":1,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
       />
       <div className="container h-100">
-        <div className="row align-items-center justify-content-center h-100">
+        <div className="row marginTop align-items-center justify-content-center h-100">
           <div className="col-xl-7 col-lg-8 col-md-10 text-white position-relative text-center text-lg-start">
             <div className="fs-70 sm-fs-60 xs-fs-60 fw-600 mb-20px ls-minus-4px overflow-hidden">
               <div
@@ -67,9 +67,9 @@ const HeroSection = ({heroData}) => {
               >
                 <span>
                   <span>
-                    <i class="bi bi-calendar-check"></i>
+                    <i className="bi bi-calendar-check"></i>
                   </span>
-                  <span class="btn-double-text" data-text="Join Our Waitlist">
+                  <span className="btn-double-text" data-text="Join Our Waitlist">
                     Join Our Waitlist
                   </span>
                 </span>
@@ -88,12 +88,12 @@ const HeroSection = ({heroData}) => {
           </div>
           <div className="col-xl-5 col-lg-4">
             <div
-              className="outside-box-right-7 position-relative"
+              className="outside-box-right-7  position-relative"
               data-anime='{ "opacity": [0, 1], "translateY": [100, 0], "easing": "easeOutQuad", "duration": 1200, "delay": 200 }'
             >
               {/* <img className="w-100" src="globebg.png" alt="" /> */}
               <div
-                className="col-md-12 position-relative atropos transform-3d"
+                className="col-md-12 marginTopSmall col-8 mx-auto position-relative atropos transform-3d"
                 data-atropos=""
               >
                 <div className="atropos-scale">

@@ -72,13 +72,13 @@ const Introdcution = ({ introData }) => {
                   .getElementById("waitlist")
                   .scrollIntoView({ behavior: "smooth" });
               }}
-              class="btn btn-gradient-fast-blue-purple btn-switch-text btn-large left-icon btn-round-edge submit text-transform-none"
+              className="btn btn-gradient-fast-blue-purple btn-switch-text btn-large left-icon btn-round-edge submit text-transform-none"
             >
               <span>
                 <span>
-                  <i class="bi bi-calendar-check"></i>
+                  <i className="bi bi-calendar-check"></i>
                 </span>
-                <span class="btn-double-text" data-text="Join Our Waitlist">
+                <span className="btn-double-text" data-text="Join Our Waitlist">
                   Join Our Waitlist
                 </span>
               </span>

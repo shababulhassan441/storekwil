@@ -6,20 +6,18 @@ const BlogPage = async () => {
   const blogHead = data?.blogPageData ?? {};
   const BlogCards = data?.blogCardsData  ?? [];
   const { heading, paragraph } = blogHead;
-  // const { title, shortDescription, description, thumbnail } = BlogCards;
 
-
-  // console.log(blogData)
   return (
-    <section class="pb-0 ipad-top-space-margin md-pt-0 mb-4">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-12 col-xl-6 col-lg-8 text-center position-relative page-title-double-large">
-            <div class="d-flex flex-column justify-content-center extra-very-small-screen">
-              <h1 class="text-dark-gray alt-font ls-minus-1px fw-bold">
+    <section className="pb-0 ipad-top-space-margin md-pt-0 mb-4">
+
+      <div  className="container">
+        <div className="row align-items-center justify-content-center">
+          <div className="col-12 col-xl-6 col-lg-8 text-center position-relative page-title-double-large">
+            <div className="d-flex flex-column justify-content-center extra-very-small-screen">
+              <h1 className="text-dark-gray alt-font ls-minus-1px fw-bold">
                 {heading || ""}
               </h1>
-              <h2 class="text-dark-gray d-inline-block fw-normal ls-normal w-80 w-xs-100 mx-auto">
+              <h2 className="text-dark-gray d-inline-block fw-normal ls-normal w-80 w-xs-100 mx-auto">
                 {paragraph || ""}
               </h2>
             </div>
@@ -100,15 +98,15 @@ export default BlogPage;
 //                         </span>
 //                         <p>{blog.shortDescription}</p>
 //                         <div className="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-14 text-uppercase">
-//                           <div class="me-auto">
-//                             <span class="blog-date fw-500 d-inline-block">
+//                           <div className="me-auto">
+//                             <span className="blog-date fw-500 d-inline-block">
 //                             {new Date(blog.$createdAt).toLocaleDateString()}
 //                             </span>
-//                             <div class="d-inline-block author-name">
+//                             <div className="d-inline-block author-name">
 //                               By{" "}
 //                               <a
 //                                 href="blog-classic.html"
-//                                 class="text-dark-gray text-dark-gray-hover text-decoration-line-bottom fw-600"
+//                                 className="text-dark-gray text-dark-gray-hover text-decoration-line-bottom fw-600"
 //                               >
 //                                 {blog.authorName}
 //                               </a>

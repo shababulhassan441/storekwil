@@ -75,7 +75,7 @@
     $(this).appear().trigger("resize");
   });
 
-  initScrollNavigate();
+  // initScrollNavigate();
   slideboxstyle();
   animateCounters();
   setSpaceInTeamStyle();
@@ -2564,7 +2564,7 @@
   $(window).resize(function () {
     slideboxstyle();
     setParallax();
-    initScrollNavigate();
+    // initScrollNavigate();
     setOverLayerPosition();
     setBottomOverLayerPosition(100);
     setSpaceInInteractiveBannerStyle();
@@ -2631,104 +2631,262 @@
     $(".left-modern-header").collapse("hide");
   });
 
-  /* ===================================
+  // /* ===================================
+  //    Window scroll
+  //    ====================================== */
+
+  // $(window).on("scroll", initScrollNavigate);
+
+  // // Window scroll Function
+  // function initScrollNavigate() {
+  //   var scrollPos = $(window).scrollTop();
+
+  //   // One page navigation
+  //   var menuLinks = $(".navbar-nav li a");
+  //   menuLinks.each(function () {
+  //     var _this = $(this);
+  //     var hasPos = _this.attr("href").indexOf("#");
+  //     if (hasPos > -1) {
+  //       var res = _this.attr("href").substring(hasPos);
+  //       if (res != "" && res != "#" && $(res).length) {
+  //         var refElement = $(_this.attr("href"));
+  //         if (
+  //           refElement.position().top <= scrollPos + 60 &&
+  //           refElement.position().top + refElement.height() > scrollPos + 60
+  //         ) {
+  //           menuLinks.removeClass("active");
+  //           _this.addClass("active");
+  //         }
+  //         if (scrollPos < 1) {
+  //           _this.removeClass("active");
+  //         }
+  //       }
+  //     }
+  //   });
+
+  //   // Sticky nav Start
+  //   var navHeight = 0,
+  //     miniHeaderHeight = 0;
+  //   if ($("header nav.navbar").length) {
+  //     navHeight = $("header nav.navbar").outerHeight();
+  //   }
+  //   if ($(".header-top-bar").length) {
+  //     miniHeaderHeight = $(".header-top-bar").outerHeight();
+  //   }
+  //   var headerHeight = navHeight + miniHeaderHeight;
+  //   if (!$("header").hasClass("no-sticky")) {
+  //     if (scrollPos >= headerHeight) {
+  //       $("header").addClass("sticky");
+  //       if (!$(".header-top-bar").is(":hidden")) {
+  //         $(".header-top-bar").css({ top: "-" + miniHeaderHeight + "px" });
+  //         $(".header-top-bar + .navbar").css({ top: "0px" });
+  //       } else {
+  //         $(".header-top-bar, .header-top-bar + .navbar").css({ top: "" });
+  //       }
+  //     } else if (scrollPos <= headerHeight) {
+  //       $("header").removeClass("sticky");
+  //       if (!$(".header-top-bar").is(":hidden")) {
+  //         $(".header-top-bar").css({ top: "0px" });
+  //         $(".header-top-bar + .navbar").css({ top: miniHeaderHeight + "px" });
+  //       } else {
+  //         $(".header-top-bar, .header-top-bar + .navbar").css({ top: "" });
+  //       }
+  //     }
+  //   }
+
+  //   // Header sticky
+  //   if (scrollPos > headerHeight + 150) {
+  //     setTimeout(function () {
+  //       $("header").addClass("sticky-active");
+  //     }, headerTransition); // Header transition effect time
+  //   }
+  //   if (scrollPos < headerHeight) {
+  //     setTimeout(function () {
+  //       $("header").removeClass("sticky-active");
+  //     }, headerTransition); // Header transition effect time
+  //   }
+
+  //   // Hide side menu on scroll
+  //   if (scrollPos >= 200 && getWindowWidth() > menuBreakPoint) {
+  //     // Close all dropdown menu
+  //     $(".dropdown").trigger("mouseleave");
+  //   }
+
+  //   // Scroll to top
+  //   if (scrollPos > 150) {
+  //     $(".scroll-top-arrow").fadeIn("300");
+  //   } else {
+  //     $(".scroll-top-arrow").fadeOut("300");
+  //   }
+
+  //   // Set full screen height & top space
+  //   if (scrollPos <= 0) {
+  //     setTimeout(function () {
+  //       fullScreenHeight();
+  //       setTopSpaceHeight();
+  //     }, headerTransition); // Header transition effect time
+  //   }
+
+  //   lastScroll = scrollPos;
+  // }
+
+
+//   /* ===================================
+//      Window scroll
+//      ====================================== */
+
+// $(window).on("scroll", initScrollNavigate);
+
+// // Window scroll Function
+// function initScrollNavigate() {
+//   var scrollPos = $(window).scrollTop();
+
+//   // One page navigation
+//   var menuLinks = $(".navbar-nav li a");
+//   menuLinks.each(function () {
+//     var _this = $(this);
+//     var hasPos = _this.attr("href").indexOf("#");
+//     if (hasPos > -1) {
+//       var res = _this.attr("href").substring(hasPos);
+//       if (res != "" && res != "#" && $(res).length) {
+//         var refElement = $(_this.attr("href"));
+//         if (
+//           refElement.position().top <= scrollPos + 60 &&
+//           refElement.position().top + refElement.height() > scrollPos + 60
+//         ) {
+//           menuLinks.removeClass("active");
+//           _this.addClass("active");
+//         }
+//         if (scrollPos < 1) {
+//           _this.removeClass("active");
+//         }
+//       }
+//     }
+//   });
+
+//   // Sticky nav Start
+//   var navHeight = 0,
+//     miniHeaderHeight = 0;
+//   if ($("header nav.navbar").length) {
+//     navHeight = $("header nav.navbar").outerHeight();
+//   }
+//   if ($(".header-top-bar").length) {
+//     miniHeaderHeight = $(".header-top-bar").outerHeight();
+//   }
+//   var headerHeight = navHeight + miniHeaderHeight;
+
+//   // Check if we are on the home page or not
+//   var isHomePage = window.location.pathname === "/" || window.location.pathname === "/index.html";
+
+//   // If we're not on the home page, always show the sticky header
+//   if (!$("header").hasClass("no-sticky")) {
+//     if (!isHomePage || scrollPos >= headerHeight) {
+//       $("header").addClass("sticky");
+//       if (!$(".header-top-bar").is(":hidden")) {
+//         $(".header-top-bar").css({ top: "-" + miniHeaderHeight + "px" });
+//         $(".header-top-bar + .navbar").css({ top: "0px" });
+//       } else {
+//         $(".header-top-bar, .header-top-bar + .navbar").css({ top: "" });
+//       }
+//     } else if (scrollPos <= headerHeight) {
+//       $("header").removeClass("sticky");
+//       if (!$(".header-top-bar").is(":hidden")) {
+//         $(".header-top-bar").css({ top: "0px" });
+//         $(".header-top-bar + .navbar").css({ top: miniHeaderHeight + "px" });
+//       } else {
+//         $(".header-top-bar, .header-top-bar + .navbar").css({ top: "" });
+//       }
+//     }
+//   }
+
+//   // Header sticky active
+//   if (scrollPos > headerHeight + 150) {
+//     setTimeout(function () {
+//       $("header").addClass("sticky-active");
+//     }, headerTransition); // Header transition effect time
+//   }
+//   if (scrollPos < headerHeight) {
+//     setTimeout(function () {
+//       $("header").removeClass("sticky-active");
+//     }, headerTransition); // Header transition effect time
+//   }
+
+//   // Hide side menu on scroll
+//   if (scrollPos >= 200 && getWindowWidth() > menuBreakPoint) {
+//     // Close all dropdown menu
+//     $(".dropdown").trigger("mouseleave");
+//   }
+
+//   // Scroll to top
+//   if (scrollPos > 150) {
+//     $(".scroll-top-arrow").fadeIn("300");
+//   } else {
+//     $(".scroll-top-arrow").fadeOut("300");
+//   }
+
+//   // Set full screen height & top space
+//   if (scrollPos <= 0) {
+//     setTimeout(function () {
+//       fullScreenHeight();
+//       setTopSpaceHeight();
+//     }, headerTransition); // Header transition effect time
+//   }
+
+//   lastScroll = scrollPos;
+// }
+
+/* ===================================
      Window scroll
      ====================================== */
 
-  $(window).on("scroll", initScrollNavigate);
+// $(document).ready(function () {
+//   // Determine if we're on the home page
+//   var isHomePage = window.location.pathname === "/";
+//   console.log("pathname",window.location.pathname)
 
-  // Window scroll Function
-  function initScrollNavigate() {
-    var scrollPos = $(window).scrollTop();
+//   $(window).on("scroll", function () {
+//     initScrollNavigate(isHomePage);
+//   });
 
-    // One page navigation
-    var menuLinks = $(".navbar-nav li a");
-    menuLinks.each(function () {
-      var _this = $(this);
-      var hasPos = _this.attr("href").indexOf("#");
-      if (hasPos > -1) {
-        var res = _this.attr("href").substring(hasPos);
-        if (res != "" && res != "#" && $(res).length) {
-          var refElement = $(_this.attr("href"));
-          if (
-            refElement.position().top <= scrollPos + 60 &&
-            refElement.position().top + refElement.height() > scrollPos + 60
-          ) {
-            menuLinks.removeClass("active");
-            _this.addClass("active");
-          }
-          if (scrollPos < 1) {
-            _this.removeClass("active");
-          }
-        }
-      }
-    });
+//   // Trigger on page load to ensure correct header state
+//   initScrollNavigate(isHomePage);
+// });
 
-    // Sticky nav Start
-    var navHeight = 0,
-      miniHeaderHeight = 0;
-    if ($("header nav.navbar").length) {
-      navHeight = $("header nav.navbar").outerHeight();
-    }
-    if ($(".header-top-bar").length) {
-      miniHeaderHeight = $(".header-top-bar").outerHeight();
-    }
-    var headerHeight = navHeight + miniHeaderHeight;
-    if (!$("header").hasClass("no-sticky")) {
-      if (scrollPos >= headerHeight) {
-        $("header").addClass("sticky");
-        if (!$(".header-top-bar").is(":hidden")) {
-          $(".header-top-bar").css({ top: "-" + miniHeaderHeight + "px" });
-          $(".header-top-bar + .navbar").css({ top: "0px" });
-        } else {
-          $(".header-top-bar, .header-top-bar + .navbar").css({ top: "" });
-        }
-      } else if (scrollPos <= headerHeight) {
-        $("header").removeClass("sticky");
-        if (!$(".header-top-bar").is(":hidden")) {
-          $(".header-top-bar").css({ top: "0px" });
-          $(".header-top-bar + .navbar").css({ top: miniHeaderHeight + "px" });
-        } else {
-          $(".header-top-bar, .header-top-bar + .navbar").css({ top: "" });
-        }
-      }
-    }
+// // Window scroll Function
+// function initScrollNavigate(isHomePage) {
+//   var scrollPos = $(window).scrollTop();
 
-    // Header sticky
-    if (scrollPos > headerHeight + 150) {
-      setTimeout(function () {
-        $("header").addClass("sticky-active");
-      }, headerTransition); // Header transition effect time
-    }
-    if (scrollPos < headerHeight) {
-      setTimeout(function () {
-        $("header").removeClass("sticky-active");
-      }, headerTransition); // Header transition effect time
-    }
+//   var navHeight = $("header nav.navbar").outerHeight() || 0;
+//   var miniHeaderHeight = $(".header-top-bar").outerHeight() || 0;
+//   var headerHeight = navHeight + miniHeaderHeight;
 
-    // Hide side menu on scroll
-    if (scrollPos >= 200 && getWindowWidth() > menuBreakPoint) {
-      // Close all dropdown menu
-      $(".dropdown").trigger("mouseleave");
-    }
+//   // Sticky Header Logic
+//   if (!isHomePage) {
+//     // For non-home pages, always sticky
+//     $("header").addClass("sticky sticky-active");
+//     $(".header-top-bar").css({ top: "-" + miniHeaderHeight + "px" });
+//     $(".header-top-bar + .navbar").css({ top: "0px" });
+//   } else {
+//     // For the home page, apply sticky only when scrolled past header height
+//     if (scrollPos >= headerHeight) {
+//       $("header").addClass("sticky sticky-active");
+//       $(".header-top-bar").css({ top: "-" + miniHeaderHeight + "px" });
+//       $(".header-top-bar + .navbar").css({ top: "0px" });
+//     } else {
+//       $("header").removeClass("sticky sticky-active");
+//       $(".header-top-bar").css({ top: "0px" });
+//       $(".header-top-bar + .navbar").css({ top: miniHeaderHeight + "px" });
+//     }
+//   }
 
-    // Scroll to top
-    if (scrollPos > 150) {
-      $(".scroll-top-arrow").fadeIn("300");
-    } else {
-      $(".scroll-top-arrow").fadeOut("300");
-    }
+//   // Header Sticky Active (for effects like transitions)
+//   if (scrollPos > headerHeight + 150) {
+//     $("header").addClass("sticky-active");
+//   } else {
+//     $("header").removeClass("sticky-active");
+//   }
+// }
 
-    // Set full screen height & top space
-    if (scrollPos <= 0) {
-      setTimeout(function () {
-        fullScreenHeight();
-        setTopSpaceHeight();
-      }, headerTransition); // Header transition effect time
-    }
-
-    lastScroll = scrollPos;
-  }
 
   /* ===================================
      Utility functions start

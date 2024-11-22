@@ -4,10 +4,13 @@
 @import url("./css/responsive.css");
 @import url("./css/hosting.css");
 
-
 html {
   scroll-behavior: smooth;
 }
+/* .custom-navbar{
+ padding: 15px 0px;
+} */
+
 .overlay {
   position: absolute;
   top: 0;
@@ -72,26 +75,91 @@ html {
   background-color: #dcfce7; /* Tailwind's red-100 */
 }
 
-
-.maxwidth-large{
+.maxwidth-large {
   max-width: 1400px;
   margin: 0 auto;
-} 
+}
 
-.maxwidth-medium{
+.maxwidth-medium {
   max-width: 1300px;
   margin: 0 auto;
-
 }
-.padding-y{
-  padding-top:32px ;
-  padding-bottom:32px ;
+.padding-y {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-.padding-x{
-  padding-left:32px ;
-  padding-right:32px ;
+.padding-x {
+  padding-left: 32px;
+  padding-right: 32px;
 }
-.btn-wrapper{
+.btn-wrapper {
   width: 100%;
 }
 
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card:hover .position-absolute {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgb(0, 0, 0);
+  border-radius: 100%;
+}
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.swiper-button-prev::before {
+  content: "\2190"; /* Left arrow */
+}
+
+.swiper-button-next::before {
+  content: "\2192"; /* Right arrow */
+}
+
+.mySwiper .swiper-slide {
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.mySwiper .swiper-slide-active .card {
+  transform: scale(1.05); /* Scale up the active slide */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Add shadow when active */
+}
+
+@media screen and (max-width: 920px) {
+  .marginTop {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .marginTopSmall {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .custom-pl {
+    padding-left: 50px;
+  }
+}

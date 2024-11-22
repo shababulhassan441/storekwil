@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const LatestBlogs = ({ BlogCards }) => {
   return (
-    <section class="pb-0 md-pt-0 mb-4">
-      <div class="padding-y padding-x maxwidth-medium">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-md-6">
-            <div class="d-flex flex-column">
-              <h3 class="text-dark-gray fw-bold">Latest Blogs</h3>
-              <p class="text-dark-gray d-inline-block fw-normal ls-normal w-100">
+    <section className="pb-0 md-pt-0 mb-4">
+      <div className="padding-y padding-x maxwidth-medium">
+        <div className="row align-items-center justify-content-between">
+          <div className="col-12 col-md-6">
+            <div className="d-flex flex-column">
+              <h3 className="text-dark-gray fw-bold">Latest Blogs</h3>
+              <p className="text-dark-gray d-inline-block fw-normal ls-normal w-100">
                 Get the latest updates, tips & tricks from our experts.
               </p>
             </div>
@@ -18,9 +18,9 @@ const LatestBlogs = ({ BlogCards }) => {
           <a href="/blogs" className="btn btn-gradient-fast-blue-purple btn-switch-text btn-large left-icon btn-round-edge submit text-transform-none">
             <span>
               <span>
-                <i class="bi bi-calendar-check"></i>
+                <i className="bi bi-calendar-check"></i>
               </span>
-              <span class="btn-double-text" data-text="See All Blogs">
+              <span className="btn-double-text" data-text="See All Blogs">
                 See All Blogs
               </span>
             </span>

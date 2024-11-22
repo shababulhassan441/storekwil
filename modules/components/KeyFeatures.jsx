@@ -1,4 +1,5 @@
 import React from "react";
+import FeatureSlider from "./FeatureSlider";
 
 const KeyFeatures = ({ headData, cardData }) => {
   const { title, subTitle } = headData;
@@ -7,7 +8,8 @@ const KeyFeatures = ({ headData, cardData }) => {
     <section
       className="cover-background section-dark bg-midnight-dark-blue"
       style={{
-        backgroundImage: `linear-gradient(135deg, #df5e93, #62278d, #000f4c), url("demo-hosting-home-02.png")`,
+        // backgroundImage: `linear-gradient(135deg, #df5e93, #62278d, #000f4c), url("demo-hosting-home-02.png")`,
+        // backgroundColor:"";
       }}
       data-0-top="background-color:rgb(25,30,61);"
       data-center-bottom="background-color:rgb(14,16,29);"
@@ -24,11 +26,11 @@ const KeyFeatures = ({ headData, cardData }) => {
             <h2 className="text-white fw-700 ls-minus-1px">{title || ""}</h2>
           </div>
         </div>
-        <div
+        {/* <div
           className="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-center ps-8 pe-8 lg-px-0"
           data-anime='{ "el": "childs", "translateY": [30, 0], "scale":[0.8,1], "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'
         >
-          {/* start features box item */}
+          
           {cardData?.map((card, index) => (
             <div
               key={index}
@@ -49,6 +51,9 @@ const KeyFeatures = ({ headData, cardData }) => {
               </div>
             </div>
           ))}     
+        </div> */}
+        <div>
+          <FeatureSlider cardData={cardData} />
         </div>
       </div>
     </section>
