@@ -48,14 +48,14 @@ const FeatureSlider = ({ cardData }) => {
             <SwiperSlide key={index}>
               <div className="mb-4">
                 <div
-                  className="card border-0 shadow-sm position-relative"
+                  className="card border-0  position-relative"
                   style={{
                     height: "400px",
                     width: "100%",
                     maxWidth: "600px", // Max width for larger screens
                     borderRadius: "15px",
                     overflow: "hidden",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    transition: "transform 0.3s ease",
                     backgroundImage: `linear-gradient(135deg, #df5e93, #62278d, #000f4c), url("demo-hosting-home-02.png")`,
                   }}
                 >
