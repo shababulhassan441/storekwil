@@ -56,7 +56,7 @@ const FeatureSlider = ({ cardData }) => {
                     borderRadius: "15px",
                     overflow: "hidden",
                     transition: "transform 0.3s ease",
-                    backgroundImage: `linear-gradient(135deg, #df5e93, #62278d, #000f4c), url("demo-hosting-home-02.png")`,
+                    backgroundImage: `linear-gradient(135deg, #df5e93, #62278d, #000f4c)`,
                   }}
                 >
                   {/* Icon & Text */}
