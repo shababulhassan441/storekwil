@@ -74,7 +74,7 @@ const FeatureSlider = ({ cardData }) => {
                         borderRadius: "15px",
                       }}
                     />
-                    <h5 className="fs-4 text-center mb-1 text-white">
+                    <h5 className="fs-4 text-center mb-1 text-white feature-title">
                       {card.title}
                     </h5>
                     <p className="card-text text-center text-white mb-0">

@@ -4,13 +4,12 @@ import Link from "next/link";
 const BlogPage = async () => {
   const data = await fetchData();
   const blogHead = data?.blogPageData ?? {};
-  const BlogCards = data?.blogCardsData  ?? [];
+  const BlogCards = data?.blogCardsData ?? [];
   const { heading, paragraph } = blogHead;
 
   return (
-    <section className="pb-0 ipad-top-space-margin md-pt-0 mb-4">
-
-      <div  className="container">
+    <section className=" b-0 ipad-top-space-margin md-pt-0 mb-4">
+      <div className="container blogcontainer-mt">
         <div className="row align-items-center justify-content-center">
           <div className="col-12 col-xl-6 col-lg-8 text-center position-relative page-title-double-large">
             <div className="d-flex flex-column justify-content-center extra-very-small-screen">
@@ -31,42 +30,47 @@ const BlogPage = async () => {
               <ul className="blog-grid blog-wrapper grid-loading grid  grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large">
                 <li className="grid-sizer" />
                 {/* start blog item */}
-                {BlogCards && BlogCards.map((blog) => (
-                  <li key={blog.$id} className="grid-item">
-                    <div className="card shadow-sm border-0 rounded-3">
-                      <img
-                        src={blog.thumbnail || "placeholder-image.webp"}
-                        alt="image"
-                        className="card-img-top rounded-top"
-                      />
-                      <div className="card-body">
-                        <div className="d-flex gap-2 align-items-center fs-6 text-black-50">
-                          <span className="fs-5 text-black">
-                            {" "}
-                            {blog.authorName}
-                          </span>
-                          <span>-</span>
-                          <span className="">
-                            {new Date(blog.$createdAt).toLocaleDateString(
-                              "en-GB",
-                              {
-                                day: "2-digit",
-                                month: "short",
-                                year: "numeric",
-                              }
-                            )}
-                          </span>
-                        </div>
-                        <p className="card-text fs-4 fw-semibold mt-2 text-black">
-                          {blog.title}
-                        </p>
+                {BlogCards &&
+                  BlogCards.map((blog) => (
+                    <li key={blog.$id} className="grid-item">
+                      <div className="card shadow-sm border-0 rounded-3">
                         <a href={`blogs/${blog.$id}`} className="">
-                          Read More ...
+                          <img
+                            src={blog.thumbnail || "placeholder-image.webp"}
+                            alt="image"
+                            className="card-img-top rounded-top"
+                          />
                         </a>
+                        <div className="card-body">
+                          <div className="d-flex gap-2 align-items-center fs-6 text-black-50">
+                            <span className="fs-5 text-black">
+                              {" "}
+                              {blog.authorName}
+                            </span>
+                            <span>-</span>
+                            <span className="">
+                              {new Date(blog.$createdAt).toLocaleDateString(
+                                "en-GB",
+                                {
+                                  day: "2-digit",
+                                  month: "short",
+                                  year: "numeric",
+                                }
+                              )}
+                            </span>
+                          </div>
+                          <p className="card-text fs-4 fw-semibold mt-2 text-black">
+                            <a href={`blogs/${blog.$id}`} className="text-black">
+                              {blog.title}
+                            </a>
+                          </p>
+                          <a href={`blogs/${blog.$id}`} className="">
+                            Read More ...
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
+                    </li>
+                  ))}
               </ul>
             </div>
           </div>

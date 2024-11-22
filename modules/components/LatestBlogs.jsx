@@ -14,8 +14,11 @@ const LatestBlogs = ({ BlogCards }) => {
               </p>
             </div>
           </div>
-          
-          <a href="/blogs" className="btn btn-gradient-fast-blue-purple btn-switch-text btn-large left-icon btn-round-edge submit text-transform-none">
+
+          <a
+            href="/blogs"
+            className="btn btn-gradient-fast-blue-purple btn-switch-text btn-large left-icon btn-round-edge submit text-transform-none"
+          >
             <span>
               <span>
                 <i className="bi bi-calendar-check"></i>
@@ -38,11 +41,13 @@ const LatestBlogs = ({ BlogCards }) => {
                 {BlogCards.map((blog) => (
                   <li key={blog.$id} className="grid-item">
                     <div className="card shadow-sm border-0 rounded-3">
-                      <img
-                        src={blog.thumbnail || "placeholder-image.webp"}
-                        alt="image"
-                        className="card-img-top rounded-top"
-                      />
+                      <a href={`blogs/${blog.$id}`} className="">
+                        <img
+                          src={blog.thumbnail || "placeholder-image.webp"}
+                          alt="image"
+                          className="card-img-top rounded-top"
+                        />
+                      </a>
                       <div className="card-body">
                         <div className="d-flex gap-2 align-items-center fs-6 text-black-50">
                           <span className="fs-5 text-black">
@@ -62,12 +67,11 @@ const LatestBlogs = ({ BlogCards }) => {
                           </span>
                         </div>
                         <p className="card-text fs-4 fw-semibold mt-2 text-black">
-                          {blog.title}
+                          <a href={`blogs/${blog.$id}`} className="text-black">
+                            {blog.title}
+                          </a>
                         </p>
-                        <a
-                          href={`blogs/${blog.$id}`}
-                          className=""
-                        >
+                        <a href={`blogs/${blog.$id}`} className="">
                           Read More...
                         </a>
                       </div>

@@ -86,22 +86,22 @@ const Introdcution = ({ introData }) => {
           </div>
         </div>
         <div
-          className="row align-items-center justify-content-center border border-color-extra-medium-gray border-radius-100px md-border-radius-6px p-50px lg-p-20px m-0 box-shadow-quadruple-large"
+          className="row align-items-center justify-content-center border border-color-extra-medium-gray border-radius-100px md-border-radius-6px p-50px lg-p-20px m-0 box-shadow-quadruple-large banner-card-container"
           data-bottom-top="transform:scale(1.1, 1.1) translateY(30px);"
           data-top-bottom="transform:scale(1, 1) translateY(-30px);"
         >
           {bannerPoints.map((point, index) => (
             <div
               key={index}
-              className="col-lg-4 col-md-6 process-step-style-07 position-relative"
+              className="col-lg-4 col-md-6 process-step-style-07 position-relative banner-card-wrapper"
             >
-              <div className="process-step-item d-flex align-items-center">
-                <div className="process-step-icon-wrap position-relative">
+              <div className="process-step-item d-flex align-items-center banner-card">
+                <div className="process-step-icon-wrap position-relative banner-card-img">
                   <div className="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-60px w-60px fs-17 fw-500">
                     <img src={bannerIcons?.[index] || ""} className="h-50px" alt="image" />
                   </div>
                 </div>
-                <div className="process-content ps-20px last-paragraph-no-margin">
+                <div className="process-content ps-20px last-paragraph-no-margin banner-card-point">
                   <span className="d-block fw-600 text-dark-gray fs-17 ls-minus-05px alt-font">
                     {point}
                   </span>

@@ -140,7 +140,18 @@ html {
   transition: transform 0.8s ease;
 }
 
+.banner-card-wrapper{
 
+}
+.banner-card{
+
+}
+.banner-card-img{
+
+}
+.banner-card-point{
+
+}
 
 @media screen and (max-width: 920px) {
   .marginTop {
@@ -153,6 +164,35 @@ html {
   }
   .swiper-slide {
     width: 90%!important;
+  }
+  .blogcontainer-mt{
+    margin-top: 80px;
+  }
+  .blog-title{
+    line-height: 24px!important;
+  }
+  .feature-title{
+    font-weight: 600!important;
+    font-size: 22px!important;
+  }
+  .banner-card-wrapper{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px!important;
+    padding-top: 15px!important;
+    padding-bottom: 15px!important;
+  }
+  .banner-card-container{
+    gap: 20px;
+    box-shadow: none!important;
+    border: none!important;
+  }
+  .banner-card{
+    display: flex!important;
+    flex-direction: column!important;
+  } 
+  .banner-card-point{
+    text-align: center!important;
+    line-height: 25px!important;
   }
 }
 
