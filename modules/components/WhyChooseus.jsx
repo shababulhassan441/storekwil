@@ -12,19 +12,18 @@ const WhyChooseus = ({ whyCards }) => {
             <div key={index} className="col mb-30px ">
               <div
                 style={{
-                  backgroundImage: `linear-gradient(-90deg, #df5e93, #866cec)`,
                   height: "auto",
                 }}
                 className="box-shadow-extra-large h-100 box-shadow-extra-large-hover border-radius-8px overflow-hidden "
               >
-                <div className="w-75 mx-auto">
+                <div className="w-50 mx-auto">
                   <img src={card.icon || ""} alt="image" />
                 </div>
                 <div className="ps-12 pe-12 xl-ps-10 xl-pe-10 md-ps-7 md-pe-7 pt-0 pb-45px  last-paragraph-no-margin text-start">
-                  <span className="d-inline-block text-white fs-20 mb-5px fw-semibold">
+                  <span className="d-inline-block text-black fs-20 mb-5px fw-semibold">
                     {card.title || ""}
                   </span>
-                  <p className="white-80 textSmall">{card.description || ""}</p>
+                  <p className="textSmall">{card.description || ""}</p>
                 </div>
               </div>
             </div>
