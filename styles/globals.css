@@ -10,7 +10,13 @@ html {
 /* .custom-navbar{
  padding: 15px 0px;
 } */
-
+.white-80{
+  color: rgba(255, 255, 255, 0.808);
+}
+.textSmall{
+  font-size: 15px!important;
+  line-height: 24px!important;
+}
 .overlay {
   position: absolute;
   top: 0;
