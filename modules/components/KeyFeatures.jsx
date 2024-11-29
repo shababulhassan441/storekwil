@@ -8,8 +8,8 @@ const KeyFeatures = ({ headData, cardData }) => {
     <section
       className="cover-background section-dark bg-midnight-dark-blue"
       style={{
-        // backgroundImage: `linear-gradient(135deg, #df5e93, #62278d, #000f4c), url("demo-hosting-home-02.png")`,
-        // backgroundColor:"";
+        backgroundImage: `linear-gradient(90deg, #fef2ad, #dceff0), url("demo-hosting-home-02.png")`,
+        // backgroundColor:"#dceff0",
       }}
       data-0-top="background-color:rgb(25,30,61);"
       data-center-bottom="background-color:rgb(14,16,29);"
@@ -20,10 +20,10 @@ const KeyFeatures = ({ headData, cardData }) => {
             className="col-lg-8 text-center"
             data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
           >
-            <span className="text-white opacity-5 mb-5px text-uppercase d-block">
+            <span className="text-black opacity-5 mb-5px text-uppercase d-block">
               {subTitle || ""}
             </span>
-            <h2 className="text-white fw-700 ls-minus-1px">{title || ""}</h2>
+            <h2 className=" text-black fw-700 ls-minus-1px">{title || ""}</h2>
           </div>
         </div>
         {/* <div
