@@ -1,5 +1,5 @@
-import { createAdminClient } from "@/appwrite/config";
-import { ID,Query } from "node-appwrite";
+import { AdminClientPerktify, createAdminClient } from "@/appwrite/config";
+import { ID, Query } from "node-appwrite";
 // import { Query } from "appwrite";
 
 export async function fetchData() {
@@ -19,7 +19,7 @@ export async function fetchData() {
       blogsPage,
       blogCards,
       recentBlogs,
-      faqAccordians
+      faqAccordians,
     ] = await Promise.all([
       databases.listDocuments(
         process.env.NEXT_PUBLIC_DATABASE_ID,
@@ -173,5 +173,37 @@ export async function RegisterToWaitList(formData) {
   } catch (error) {
     console.error("ERROR RegisterToWaitList", error);
     return { message: error?.message, type: "error" };
+  }
+}
+
+export async function fetchUserDetails(userId) {
+  try {
+    const { databases } = await AdminClientPerktify();
+
+    const response = await databases.getDocument(
+      process.env.NEXT_PUBLIC_PERKTIFY_DATABASE_ID,
+      process.env.NEXT_PUBLIC_PERKTIFY_COLLECTION_ID_USERS,
+      userId
+    );
+    return response;
+  } catch (error) {
+    console.error("ERROR in fetchUserDetails", error);
+    return null;
+  }
+}
+
+export async function fetchBanner() {
+  try {
+    const { databases } = await AdminClientPerktify();
+
+    const response = await databases.listDocuments(
+      process.env.NEXT_PUBLIC_PERKTIFY_DATABASE_ID,
+      process.env.NEXT_PUBLIC_PERKTIFY_COLLECTION_ID_COMPAIGN,
+      [Query.limit(1)]
+    );
+    return response?.documents?.[0];
+  } catch (error) {
+    console.error("ERROR in fetchBanner", error);
+    return null;
   }
 }

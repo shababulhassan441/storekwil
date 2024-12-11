@@ -21,9 +21,10 @@ import { cookies } from "next/headers";
 
 
 
-export default async function Home() {
+export default async function Home({searchParams}) {
  cookies()
   const data=await fetchData()
+  const {referCode}=searchParams;
 
   return (
     <>
@@ -45,7 +46,7 @@ export default async function Home() {
 
       <FaqAccordians faqData={data.faqData} />
 
-      <WaitList waitList={data.WaitListData} />
+      <WaitList waitList={data.WaitListData} referCode={referCode} />
 
       <StickyElements linksUrl={data.stickyLinksUrl} />
     </>

@@ -1,11 +1,13 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BiSolidError, BiSolidCheckCircle } from "react-icons/bi";
 import { Oval } from "react-loader-spinner";
 import { RegisterToWaitList } from "@/appwrite/data";
 import "@/styles/globals.css";
+import { createNewUserRegistration } from "@/lib/actions";
+import { useRouter } from "next/navigation";
 
-const WaitList = ({ waitList }) => {
+const WaitList = ({ waitList, referCode }) => {
   const countries = [
     "United Kingdom",
     "Afghanistan",
@@ -202,10 +204,17 @@ const WaitList = ({ waitList }) => {
     "Zambia",
     "Zimbabwe",
   ];
-
+const router=useRouter()
   const formRef = useRef(null); // Create a ref for the form
   const [status, setStatus] = useState(null); // Track the submission status
   const [loading, setLoading] = useState(false); // Track the submission status
+
+
+  const handleTest=()=>{
+    router.push('/success/67596bc8002c6f18cfef').then(() => {
+      window.location.reload();
+    });
+  }
 
   const handleSubmit = async (e) => {
     setLoading(true);
@@ -214,19 +223,26 @@ const WaitList = ({ waitList }) => {
     const formData = new FormData(formRef.current);
 
     // Call your RegisterToWaitList server action
-    const response = await RegisterToWaitList(formData);
+    const response = await createNewUserRegistration(formData);
 
-    // if (response.type === "success") {
-    setStatus({ message: "Request Submitted Successfully", type: "success" });
-    formRef.current.reset(); // Reset the form fields after success
-    // } else {
-    //   setStatus({ message: response.message, type: "error" });
-    // }
+    if (response.type === "success") {
+       router.push(`/success/${response.message}`)
+      // window.location.href(`/success/${response.message}`)
+      // formRef.current.reset(); // Reset the form fields after success
+    } else {
+      setStatus({ message: response.message, type: "error" });
+    }
 
     setLoading(false);
   };
 
   // ,,,,country,
+
+  // useEffect(
+  //   ()=>{
+  //     window.location.href(`/success/67596bc8002c6f18cfef`)
+  //   },[]
+  // )
 
   const { title, para } = waitList;
   return (
@@ -385,14 +401,11 @@ const WaitList = ({ waitList }) => {
               </div>
 
               <div style={{ marginBottom: "15px" }}>
-                <label
-                  htmlFor="telephone"
-                  style={{ fontWeight: "bold" }}
-                ></label>
+                <label htmlFor="phone" style={{ fontWeight: "bold" }}></label>
                 <input
                   type="tel"
                   placeholder="* TELEPHONE"
-                  name="telephone"
+                  name="phone"
                   style={{
                     width: "100%",
                     padding: "10px",
@@ -401,6 +414,26 @@ const WaitList = ({ waitList }) => {
                     color: "black",
                   }}
                   required
+                />
+              </div>
+              <div style={{ marginBottom: "15px" }}>
+                <label
+                  htmlFor="referCode"
+                  style={{ fontWeight: "bold" }}
+                ></label>
+                <input
+                  type="text"
+                  defaultValue={referCode}
+                  placeholder="Referral Code"
+                  name="referCode"
+                  style={{
+                    width: "100%",
+                    padding: "10px",
+                    borderRadius: "5px",
+                    border: "1px solid #ccc",
+                    color: "black",
+                  }}
+                  
                 />
               </div>
 
@@ -458,6 +491,7 @@ const WaitList = ({ waitList }) => {
           )}
         </div>
       </div>
+      {/* <button onClick={handleTest}>test</button> */}
     </section>
   );
 };

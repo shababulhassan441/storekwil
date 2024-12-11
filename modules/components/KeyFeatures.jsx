@@ -8,7 +8,7 @@ const KeyFeatures = ({ headData, cardData }) => {
     <section
       className="cover-background section-dark bg-midnight-dark-blue"
       style={{
-        backgroundImage: `linear-gradient(90deg, #fef2ad, #dceff0), url("demo-hosting-home-02.png")`,
+        // backgroundImage: `linear-gradient(90deg, #fef2ad, #dceff0), url("demo-hosting-home-02.png")`,
         // backgroundColor:"#dceff0",
       }}
       data-0-top="background-color:rgb(25,30,61);"
@@ -23,7 +23,7 @@ const KeyFeatures = ({ headData, cardData }) => {
             <span className="text-black opacity-5 mb-5px text-uppercase d-block">
               {subTitle || ""}
             </span>
-            <h2 className=" text-black fw-700 ls-minus-1px">{title || ""}</h2>
+            <h2 className=" text-white fw-700 ls-minus-1px">{title || ""}</h2>
           </div>
         </div>
         {/* <div
